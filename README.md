@@ -1,5 +1,5 @@
 # Image Captioning
-Image captioning is describing an image fed to the model. The task of object detection has been studied for a long time but recently the task of image captioning is coming into light. This repository contains the "Neural Image Caption" model proposed by Vinyals et. al.[1]
+Image captioning is describing an image fed to the model. The task of object detection has been studied for a long time but recently the task of image captioning is coming into light. 
 
 ## Dataset
 The dataset used is flickr8k. You can request the data [here](https://illinois.edu/fb/sec/1713398). An email for the links 
@@ -25,30 +25,4 @@ of the data to be downloaded will be mailed to your id. Extract the images in Fl
 
 NOTE - You can skip the training part by directly downloading the weights and model file and placing them in the Output folder since the training part wil take a lot of time if working on a non-GPU system. A GTX 1050 Ti with 4 gigs of RAM takes around 10-15 minutes for one epoch.
 
-## Output
-The output of the model is a caption to the image and a python library called pyttsx which converts the generated text to audio
 
-## Results
-Following are a few results obtained after training the model for 70 epochs.
-
-Image | Caption 
---- | --- 
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/beach.jpg" width="400"> | **Generated Caption:** A brown dog is running in the water.
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/image.jpg" width="400"> | **Generated Caption:** A tennis player hitting the ball.
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/child.png" width="400"> | **Generated Caption:** A child in a helmet is riding a bike.
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/street.png" width="400"> | **Generated Caption:** A group of people are walking on a busy street.
-
-
-On providing an ambiguous image for example a hamsters face morphed on a lion the model got confused but since the data is a bit biased towards dogs hence it captions it as a dog and the reddish pink nose of the hamster is identified as red ball
-
-Image | Caption
---- | ---
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/9.jpg" width="400"> | **Generated Caption:** A black dog is running through the snow with a red ball.
-
-
-In some cases the classifier got confused and on blurring an image it produced bizzare results
-
-Image | Caption
---- | ---
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/img1.jpg" width="400"> | **Generated Caption:** A brown dog and a brown dog are playing with a ball in the snow.
-<img src="https://github.com/kakshak07/Image-Captioining/blob/master/test/img1_blur.jpg" width="400"> | **Generated Caption:** A little girl in a white shirt is running on the grass.
